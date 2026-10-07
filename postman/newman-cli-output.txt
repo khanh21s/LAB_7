@@ -1,0 +1,54 @@
+﻿Postman API Testing - Posts
+
+→ TC-01 GET danh sach bai viet
+  GET https://jsonplaceholder.typicode.com/posts?_limit=5 [200 OK, 2.44kB, 271ms]
+  √  Status code is 200
+  √  Response is a JSON array with 5 posts
+
+→ TC-02 GET mot bai viet theo ID
+  GET https://jsonplaceholder.typicode.com/posts/1 [200 OK, 1.24kB, 67ms]
+  √  Status code is 200
+  √  Post has the expected ID and fields
+
+→ TC-03 POST tao bai viet
+  POST https://jsonplaceholder.typicode.com/posts [201 Created, 1.15kB, 304ms]
+  √  Status code is 201
+  √  Response contains the submitted post data
+
+→ TC-04 PUT cap nhat toan bo
+  PUT https://jsonplaceholder.typicode.com/posts/1 [200 OK, 1.04kB, 761ms]
+  √  Status code is 200
+  √  Response matches the updated post
+
+→ TC-05 PATCH cap nhat mot phan
+  PATCH https://jsonplaceholder.typicode.com/posts/1 [200 OK, 1.19kB, 308ms]
+  √  Status code is 200
+  √  Response contains the updated title
+
+→ TC-06 DELETE bai viet
+  DELETE https://jsonplaceholder.typicode.com/posts/1 [200 OK, 908B, 304ms]
+  √  Status code is 200
+
+→ TC-07 GET endpoint khong ton tai
+  GET https://jsonplaceholder.typicode.com/invalid-endpoint [404 Not Found, 930B, 72ms]
+  √  Unknown endpoint returns 404
+
+┌─────────────────────────┬────────────────────┬────────────────────┐
+│                         │           executed │             failed │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│              iterations │                  1 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│                requests │                  7 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│            test-scripts │                  7 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│      prerequest-scripts │                  0 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│              assertions │                 12 │                  0 │
+├─────────────────────────┴────────────────────┴────────────────────┤
+│ total run duration: 2.6s                                          │
+├───────────────────────────────────────────────────────────────────┤
+│ total data received: 2.19kB (approx)                              │
+├───────────────────────────────────────────────────────────────────┤
+│ average response time: 298ms [min: 67ms, max: 761ms, s.d.: 213ms] │
+└───────────────────────────────────────────────────────────────────┘
