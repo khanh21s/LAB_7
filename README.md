@@ -324,12 +324,3 @@ newman run postman/Postman-API-Testing-Posts.postman_collection.json \
 - **Khó khăn gặp phải và cách xử lý:** JSONPlaceholder không lưu dữ liệu ghi, nên không thể kiểm tra bằng cách `GET` lại sau khi `POST`/`PUT`; cách xử lý là kiểm tra trực tiếp nội dung response của chính request ghi.
 - **Hướng thực hành tiếp theo:** Thêm kiểm tra header (`Content-Type`), giới hạn thời gian phản hồi (`pm.response.responseTime`), JSON schema; dùng biến động (lưu `id` từ response POST cho request sau); thực hành với API có xác thực (Bearer token / API key); chạy collection với file dữ liệu (data-driven testing).
 
-## 9. Danh sách kiểm tra trước khi nộp
-
-- [ ] Đã xem video được giao và ghi lại nội dung học tập.
-- [x] Đã tham khảo ít nhất một tài liệu khác; ghi nguồn ở mục 2.
-- [x] Đã tạo Environment, Collection và các request trong Postman.
-- [x] Đã chạy từng request và collection, ghi kết quả thực tế trung thực.
-- [x] Đã xem Test Results và giải thích các trường hợp thất bại (nếu có).
-- [x] Đã chèn ảnh chụp màn hình của lần chạy thực tế.
-- [ ] Đã điền thông tin sinh viên và hoàn thiện phần kết luận.
